@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">Py Auto IMDb</a>
+</nav>
+	<h1>Welcome boss</h1>
+	{% for moviUrl, moviImg in allMovieData.items %}
+    <img src="{{moviImg.0}}" alt="moviImg" height="50px" width="50px">
+    <a href="{% url 'extract' moviUrl %}"> Movie Url : {{moviImg.1}} </a>
+    <br>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,1 @@
+web: gunicorn autoIMDb.wsgi --log-file -
